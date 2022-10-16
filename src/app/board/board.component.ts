@@ -9,9 +9,14 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 
 export class BoardComponent implements OnInit {
 
-  todo = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
+  todo = ['Get to work', 'Pick up grenades', 'Go home', 'Fall asleep'];
+
+  inProgress = ['Bla', '1', '2', '3'];
 
   done = ['Get up', 'Brush teeth', 'Take a shower', 'Check e-mail', 'Walk dog'];
+
+  testing = ['Copy', 'Paste', 'adac', 'acab'];
+
 
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
