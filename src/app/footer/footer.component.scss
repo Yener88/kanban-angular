@@ -1,22 +1,16 @@
-.navbarDirection1 {
+.footerDirection1 {
     display: flex;
     justify-content: center;
 }
 
-.navbarDirection2 {
+.footerDirection2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 1100px;
     width: 100%;
     height: 10vh;
-    background-color: pink;
+    background-color: rgb(134, 134, 255);
     padding-left: 15px;
     padding-right: 15px;
-}
-
-.menuLinks {
-    a {
-        padding-left: 8px;
-    }
 }
