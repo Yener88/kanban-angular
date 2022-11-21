@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-startpage',
@@ -7,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StartpageComponent implements OnInit {
 
-  title = ['Startpage']
-  constructor() { }
+  title = 'STARTPAGE';
 
-  ngOnInit(): void {
+  constructor(private titleService: Title) {
+  }
+
+  ngOnInit() {
+    this.titleService.setTitle(this.title);
   }
 
 }

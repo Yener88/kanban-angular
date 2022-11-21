@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { BrowserAnimationsModule,  } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BoardComponent } from './board/board.component';
-import { DragDropModule } from '@angular/cdk/drag-drop';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { BoardComponent } from './board/board.component';
 import { AddtaskComponent } from './addtask/addtask.component';
 import { BacklogComponent } from './backlog/backlog.component';
 import { HistorieComponent } from './historie/historie.component';
@@ -18,6 +19,7 @@ import { StartpageComponent } from './startpage/startpage.component';
 @NgModule({
   declarations: [
     AppComponent,
+    StartpageComponent,
     BoardComponent,
     NavbarComponent,
     FooterComponent,
@@ -25,7 +27,6 @@ import { StartpageComponent } from './startpage/startpage.component';
     BacklogComponent,
     HistorieComponent,
     FPolicyComponent,
-    StartpageComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +34,7 @@ import { StartpageComponent } from './startpage/startpage.component';
     DragDropModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [Title],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

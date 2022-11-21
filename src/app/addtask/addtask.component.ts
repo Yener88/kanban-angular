@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-addtask',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddtaskComponent implements OnInit {
 
-  constructor() { }
+  title = 'ADD TASK';
+
+  constructor(private titleService:Title) { 
+
+  }
 
   ngOnInit(): void {
+    this.titleService.setTitle(this.title);
   }
 
 }

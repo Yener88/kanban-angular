@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-board',
@@ -8,6 +9,8 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 })
 
 export class BoardComponent implements OnInit {
+
+  title = 'BOARD';
 
   todo = ['Get to work', 'Pick up grenades', 'Go home', 'Fall asleep'];
 
@@ -31,9 +34,10 @@ export class BoardComponent implements OnInit {
     }
   }
 
-  constructor() { }
+  constructor(private titleService:Title) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle(this.title);
   }
 
 }

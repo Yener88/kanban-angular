@@ -7,36 +7,31 @@ import { FPolicyComponent } from './f-policy/f-policy.component';
 import { HistorieComponent } from './historie/historie.component';
 import { StartpageComponent } from './startpage/startpage.component';
 
+
 const routes: Routes = [
   {
     path: 'startpage',
-    component: StartpageComponent,
-    data: { title: "Startpage" }
+    component: StartpageComponent
   },
   {
     path: 'board',
-    component: BoardComponent,
-    data: { title: "Board" }
+    component: BoardComponent
   },
   {
     path: 'backlog',
-    component: BacklogComponent,
-    data: { title: "Backlog" }
+    component: BacklogComponent
   },
   {
     path: 'addtask',
-    component: AddtaskComponent,
-    data: { title: "Add Task" }
+    component: AddtaskComponent
   },
   {
     path: 'history',
-    component: HistorieComponent,
-    data: { title: "History" }
+    component: HistorieComponent
   },
   {
     path: 'fpolicy',
-    component: FPolicyComponent,
-    data: { title: "Policy" }
+    component: FPolicyComponent
   }
 ];
 

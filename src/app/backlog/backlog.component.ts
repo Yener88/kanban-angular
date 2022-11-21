@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-backlog',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BacklogComponent implements OnInit {
 
-  constructor() { }
+  title = 'BACKLOG';
+
+  constructor(private titleService:Title) { 
+
+  }
 
   ngOnInit(): void {
+    this.titleService.setTitle(this.title);
   }
 
 }
